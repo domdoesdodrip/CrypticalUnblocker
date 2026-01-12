@@ -1,4 +1,4 @@
-we only have 3 sites, https://crypticality.netlify.app/home, https://cryptical.vercel.app/home & https://cryptical.wtf/home
+we only have 3 sites, https://crypticality.netlify.app/, https://cryptical.vercel.app/ & https://cryptical.wtf/
 ANY other sites are not official and you should not trust them
 
 # Released!
