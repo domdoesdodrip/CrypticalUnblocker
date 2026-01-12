@@ -13,7 +13,7 @@ ANY other sites are not official and you should not trust them
 
 -Portal 2 is the final version and is extremely hard to detect and block it guarantees privacy.
 
--v1.0 Update log
+# 1.0 Update log
 
 fully release both websites (https://crypticality.netlify.app/ & https://cryptical.vercel.app/)
 
