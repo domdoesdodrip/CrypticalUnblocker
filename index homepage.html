@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptical | Entry</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/8810/8810461.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        canvas#stars { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+        body { 
+            background: #0a0510; 
+            color: #d8b4fe; 
+            font-family: 'Space Grotesk', sans-serif; 
+            height: 100vh; 
+            margin: 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .enter-btn {
+            position: relative;
+            z-index: 10;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
+            letter-spacing: 0.3em;
+            padding: 1.5rem 3rem;
+            background: transparent;
+            border: 1px solid #a855f7;
+            color: #a855f7;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+        }
+
+        .enter-btn:hover {
+            background: #a855f7;
+            color: #0a0510;
+            box-shadow: 0 0 50px rgba(168, 85, 247, 0.6);
+            transform: scale(1.05);
+        }
+
+        .version-tag {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            opacity: 0.4;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="stars"></canvas>
+
+    <button id="entry-button" class="enter-btn">
+        ENTER CRYPTICAL
+    </button>
+
+    <div class="version-tag">CRYPTICAL v1.5 // ENTRY_NODE</div>
+
+    <script>
+        // --- STARFIELD ---
+        const canvas = document.getElementById("stars");
+        const ctx = canvas.getContext("2d");
+        let w, h, particles;
+        function resize() { 
+            w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; 
+            particles = Array.from({length: 100}, () => ({ 
+                x: Math.random() * w, y: Math.random() * h, 
+                size: Math.random() * 2 + 0.5, speedY: Math.random() * 0.2 + 0.05, 
+                opacity: Math.random() * 0.5 + 0.2, hue: 270 
+            })); 
+        }
+        window.addEventListener("resize", resize); resize();
+        function draw() { 
+            ctx.clearRect(0, 0, w, h); 
+            particles.forEach(p => { 
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI*2); 
+                ctx.fillStyle = `hsla(${p.hue},70%,70%,${p.opacity})`; ctx.fill(); 
+                p.y+=p.speedY; if(p.y>h) p.y=0; 
+            }); 
+            requestAnimationFrame(draw); 
+        }
+        draw();
+
+        // --- DYNAMIC ROUTING LOGIC ---
+        const enterBtn = document.getElementById('entry-button');
+
+        enterBtn.addEventListener('click', () => {
+            const currentHost = window.location.origin;
+            
+            // Logic: Take current origin and append /home
+            // This covers .wtf, netlify, and vercel automatically
+            window.location.href = currentHost + "/home";
+        });
+    </script>
+</body>
+</html>
