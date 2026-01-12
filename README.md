@@ -43,6 +43,12 @@ https://cryptical.wtf
 
 -add discord
 
-# Update 1.4
+# Big Update 1.4
+
+-add animations to popups
+
+-include github + mirror sites
+
+-better site servers
 
 -add selection of proxy to use inside of games
