@@ -45,7 +45,7 @@ https://cryptical.wtf
 
 # We dont talk about 1.4...
 
-# Big Update 1.5
+# Big Update 1.5 coming soon
 
 -add animations to popups
 
