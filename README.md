@@ -1,4 +1,4 @@
-we only have 2 sites, https://crypticality.netlify.app/, https://crypticalunblocker.vercel.app
+we only have 3 sites, https://crypticality.netlify.app/, https://crypticalunblocker.vercel.app and https://domdoesdodrip.github.io/CrypticalUnblocker/
 ANY other sites are not official and you should not trust them
 
 # Released!
@@ -57,3 +57,5 @@ added signal presets (Discord, YouTube, Bing, Instagram, Tiktok and reddit)
 # Site update
 
 -Remove .wtf domain for another project
+
+-Replaced with https://domdoesdodrip.github.io/CrypticalUnblocker/
