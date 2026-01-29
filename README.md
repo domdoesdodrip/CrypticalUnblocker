@@ -59,3 +59,7 @@ added signal presets (Discord, YouTube, Bing, Instagram, Tiktok and reddit)
 -Remove .wtf domain for another project
 
 -Replaced with https://domdoesdodrip.github.io/CrypticalUnblocker/
+
+# Hotfix for v1.5
+
+the github mirror wasnt working correctly, it's fixed now :)
